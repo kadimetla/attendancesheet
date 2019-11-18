@@ -23,6 +23,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
   console.log("Database connection ready");
 
   var distDir = __dirname + "/dist/";
+  console.log(distDir);
 app.use(express.static(distDir));
   // Initialize the app.
   var server = app.listen(process.env.PORT || 8080, function () {
